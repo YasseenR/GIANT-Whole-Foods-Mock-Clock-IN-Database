@@ -1,0 +1,7 @@
+create trigger t_new_shift
+	on FINL_TIME_TABLE
+after insert
+as
+update FINL_TIME_TABLE
+set TIME_TOTAL = ABS(DATEDIFF(HOUR,INSERTED.TIME_START, INSERTED.TIME_END)) from inserted
+where FINL_TIME_TABLE.SHIFT_NUM = INSERTED.SHIFT_NUM;

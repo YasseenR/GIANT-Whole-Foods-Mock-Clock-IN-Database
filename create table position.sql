@@ -1,0 +1,7 @@
+use OSI_Student12_DB
+
+CREATE TABLE FINL_POSITION (
+		POSITION_ID char(3) NOT NULL primary key,
+		POSITION_TYPE varchar(40) NULL,
+		POSITION_DESC varchar(100) NULL,
+		POSITION_PAY decimal(4,2) NULL);

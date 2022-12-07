@@ -1,0 +1,10 @@
+use OSI_Student12_DB
+
+CREATE TABLE FINL_SCHEDULED_SHIFT (
+		EMPLOYEE_ID char(3) NOT NULL foreign key references FINL_EMPLOYEE(EMPLOYEE_ID),
+		SHIFT_NUM char(3) NOT NULL foreign key references FINL_TIME_TABLE(SHIFT_NUM),
+		SCHED_TIME_DATE date,
+		SCHED_TIME_START time,
+		SCHED_TIME_END time,
+		SCHED_TIME_TOTAL int,
+);
